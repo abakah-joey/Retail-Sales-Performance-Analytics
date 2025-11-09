@@ -41,7 +41,7 @@ DATA CLEANING
 
 DATA ENHANCEMENT
 
-- Five new calculated columns were created within the sales data:
+Five new calculated columns were created within the sales data:
 
 * Raw Revenue = Unit Price × Quantity
 * Percentage Discount = Discount ÷ 100
@@ -57,7 +57,7 @@ DATA ENHANCEMENT
 
 DATA MODELING
 
-- Relationships were built across datasets using common keys:
+Relationships were built across datasets using common keys:
 
 * Sales ↔ Customers: via CustomerID
 * Sales ↔ Products: via ProductID
@@ -71,15 +71,15 @@ DATA MODELING
 
 FORMULAS AND MEASURES
 
-- Calculated Columns:
+Calculated Columns:
 
-8 Raw Revenue = UnitPrice * Quantity
+* Raw Revenue = UnitPrice * Quantity
 * Percentage Discount = Discount / 100
 * Discount Amount = [Percentage Discount] * [Raw Revenue]
 * Net Revenue = [Raw Revenue] - [Discount Amount]
 
 
-- Key DAX Measures:
+Key DAX Measures:
 
 * Total Net Revenue
 * Total Stock Sold
@@ -111,7 +111,7 @@ Share of contribution across customers, categories, and regions.
 
 VISUALIZATION
 
-- Three interactive dashboards were developed:
+Three interactive dashboards were developed:
 
 * Sales Analytics Dashboard:
 Highlights revenue trends by category, region, and month.
@@ -131,17 +131,17 @@ KPIs: Average Order Value, Average Revenue per Customer.
 <img width="1272" height="668" alt="Screenshot 2025-11-09 140424" src="https://github.com/user-attachments/assets/e62ebbd6-56ee-4782-9ba5-a0dc9a9b4687" />
 
 
-- Each dashboard uses a binary color theme and includes slicers for easy filtering and dynamic exploration, maintaining a clean, spacious layout for quick insights.
+Each dashboard uses a binary color theme and includes slicers for easy filtering and dynamic exploration, maintaining a clean, spacious layout for quick insights.
 
 
 
 DISCUSSION AND INTERPRETATION
 
-- The analysis of sales, product, and customer data provides valuable insights into revenue drivers, customer behavior, and product performance.
+The analysis of sales, product, and customer data provides valuable insights into revenue drivers, customer behavior, and product performance.
 These insights directly inform strategic business decisions for growth and profitability.
 
 
-* Sales Performance Insights
+Sales Performance Insights
 
 - Total Net Revenue: 106K generated from 50 transactions, showing strong sales activity.
 - Monthly Trend: Revenue peaked in April (30K) before stabilizing in May and June.
@@ -152,7 +152,7 @@ Laptops (23.4K) ranked highest in revenue.
 Followed by Tables and Mobiles, indicating strong demand for tech-related items.
 
 
-* Product Profitability
+Product Profitability
 
 - Electronics: 49.73% of total revenue with the highest profit margin (92.58%).
 - Furniture: 36.88% contribution with healthy margins.
@@ -161,7 +161,7 @@ Followed by Tables and Mobiles, indicating strong demand for tech-related items.
 - Composite Growth Index: Confirms Electronics and Furniture as top-value categories that balance high revenue with strong profitability.
 
 
-* Customer Behavior
+Customer Behavior
 
 - Gender Insight: Female customers contribute 90.9% of total revenue, showing a strong gender-driven trend.
 - Loyalty Analysis: 
@@ -171,7 +171,7 @@ Gold and Silver members record fewer transactions but higher average spend per o
 - Top Customers: The top five customers generate 72K in total revenue, showing high dependence on a small elite group.
 
 
-* Discount Strategy
+Discount Strategy
 
 - Total Discount Amount: 14K across transactions.
 - Average Discount: 280, indicating aggressive discounting, especially in Clothing.
@@ -221,14 +221,14 @@ CONCLUSION
 
 The Power BI analysis successfully combined and examined sales, product, and customer data to generate actionable insights.
 
-* Key Findings:
+Key Findings:
 
 - Electronics and Furniture are the most profitable categories.
 - Female customers and Bronze loyalty members drive the majority of revenue.
 - Discounts are substantial but may be reducing profitability.
 - A small number of customers contribute a large share of total revenue.
 
-* Recommended Actions:
+Recommended Actions:
 
 - Focus on profitable product categories.
 - Strengthen loyalty programs and retention strategies.
