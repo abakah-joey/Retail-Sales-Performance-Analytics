@@ -107,6 +107,7 @@ SQL STEPS
 
 
 4. SQL Queries and Analysis
+   
 4.1 Key Performance Indicators (KPIs)
    * COUNT() – Calculated total customers, products, and sales transactions.
    * SUM() – Calculated total sales revenue.
@@ -122,7 +123,7 @@ SQL STEPS
 
 EXPLORATORY DATA ANALYSIS
 
-- The Power BI dashboard leveraged DAX measures to explore revenue trends, customer behavior, and product performance.
+- Used a Power BI dashboard to leverage DAX measures and explore revenue trends, customer behavior, and product performance.
 
 - Visualizations included bar charts, line charts, pie charts, and bubble charts to display:
 
