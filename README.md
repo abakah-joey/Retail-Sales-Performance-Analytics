@@ -10,7 +10,8 @@ EXECUTIVE SUMMARY
 PROBLEM STATEMENT
 - The goal of this project is to determine which product categories generate the highest revenue, identify top customers and the factors driving their retention, and analyze how sales performance varies across regions and over time. It also aims to uncover the products contributing most significantly to the overall growth of the business.
 
-
+TOOLS USED
+- MySQL, Excel, Power BI
 
 DATA UNDERSTANDING
 
@@ -24,7 +25,6 @@ DATA UNDERSTANDING
 * Data Limitation: Incorrect subcategory-to-category pairing identified in the source data.
 
 
-
 METHODOLOGY
 
 DATA CLEANING
@@ -36,7 +36,6 @@ DATA CLEANING
 * Standardized the date format (General → Date).
 * Converted price fields to currency format.
 * Adjusted the discount column to decimal percentage format.
-
 
 
 DATA ENHANCEMENT
@@ -53,8 +52,6 @@ Five new calculated columns were created within the sales data:
 <img width="881" height="453" alt="Screenshot 2025-11-09 151900" src="https://github.com/user-attachments/assets/04939e67-d9e9-47cd-9ee6-3405a0b20f8b" />
 
 
-
-
 DATA MODELING
 
 Relationships were built across datasets using common keys:
@@ -66,7 +63,6 @@ Relationships were built across datasets using common keys:
 <img width="1818" height="668" alt="Screenshot 2025-11-09 141325" src="https://github.com/user-attachments/assets/37f31bd3-96de-45e8-b61b-78d14e9e33f5" />
 
 - All datasets were merged into a single unified model in Power BI using the Combine Queries function, ensuring seamless cross-table analysis and report consistency.
-
 
 
 FORMULAS AND MEASURES
@@ -95,6 +91,33 @@ Key DAX Measures:
 <img width="1817" height="631" alt="Screenshot 2025-11-09 140544" src="https://github.com/user-attachments/assets/7aa04433-a8e5-4f79-889a-d5c312397d76" />
 
 
+SQL STEPS
+1. Database Setup
+  * Created a MySQL database named retail_analytics.
+  * The data was originally in .xlsm format and was converted to .csv for import.
+ 
+2. Data Import & Table Creation
+  * Imported CSV files into MySQL Workbench using the Table Data Import Wizard.
+  * Ensured column data types were correctly assigned (text, integer, date) during import.
+  * Tables were automatically created with all necessary columns.
+
+3. Data Cleaning
+  * Removed Byte Order Marks (BOM) from customers_data and product_data columns using ALTER TABLE.
+  * Converted string-formatted date columns to DATE type, and then extracted the Year-Month format for monthly revenue trend analysis.
+
+
+4. SQL Queries and Analysis
+4.1 Key Performance Indicators (KPIs)
+   * COUNT() – Calculated total customers, products, and sales transactions.
+   * SUM() – Calculated total sales revenue.
+
+4.2 Data Merging & Filtering
+   * Used JOIN and LEFT JOIN to combine tables for comprehensive analysis.
+   * Identified customers with no transactions using LEFT JOIN and IS NULL.
+
+4.3 Revenue & Customer Analysis
+   * GROUP BY, ORDER BY, and LIMIT were applied to identify high-spending customers.
+   * Joined products_data and sales_data to analyze items sold by average price and purchase frequency.
 
 
 EXPLORATORY DATA ANALYSIS
@@ -116,14 +139,14 @@ Three interactive dashboards were developed:
 * Sales Analytics Dashboard:
 Highlights revenue trends by category, region, and month.
 KPIs: Total Net Revenue, Discount Amount, Average Discount Amount, Total Stock Sold.
-<img width="1261" height="663" alt="Screenshot 2025-11-09 140516" src="https://github.com/user-attachments/assets/d22e06c4-c3b6-43bf-b981-e8814ac9e37c" />
 
+<img width="1261" height="663" alt="Screenshot 2025-11-09 140516" src="https://github.com/user-attachments/assets/d22e06c4-c3b6-43bf-b981-e8814ac9e37c" />
 
 * Product Analytics Dashboard:
 Displays the contribution of product categories to revenue and profit.
 KPIs: Total Cost, Gross Profit, Profit Margin.
-<img width="1269" height="657" alt="Screenshot 2025-11-09 140456" src="https://github.com/user-attachments/assets/7a21a7c1-99a2-4c7d-9876-8561cd97ad2a" />
 
+<img width="1269" height="657" alt="Screenshot 2025-11-09 140456" src="https://github.com/user-attachments/assets/7a21a7c1-99a2-4c7d-9876-8561cd97ad2a" />
 
 * Customer Analytics Dashboard:
 Examines customer loyalty, retention drivers, and top spenders.
